@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-
+import SimpleForm from './components/SimpleForm';
 const books = [
   { title: 'Mastering React', author: 'Anthony Pham', cover: "MasteringReact" },
   { title: 'Practical React', author: 'Alex Johnson', cover: "PracticalReact" },
@@ -25,6 +25,9 @@ function App() {
     <>
       <section className="book-list">
         {bookCard()}
+      </section>
+      <section className='form-section'>
+        <SimpleForm />
       </section>
     </>
   );

@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import SimpleForm from './components/SimpleForm';
 import EventHandling from './components/EventHandling';
+import GetData from './components/GetData';
 const books = [
   { title: 'Mastering React', author: 'Anthony Pham', cover: "MasteringReact" },
   { title: 'Practical React', author: 'Alex Johnson', cover: "PracticalReact" },
@@ -35,6 +36,7 @@ function App() {
       //Event handling section
       <section className='event-section'>
         <EventHandling />
+        <GetData></GetData>
       </section>
    
     </>

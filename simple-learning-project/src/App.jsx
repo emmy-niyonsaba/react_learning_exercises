@@ -4,6 +4,7 @@ import SimpleForm from './components/SimpleForm';
 import EventHandling from './components/EventHandling';
 import GetData from './components/GetData';
 const books = [
+  //set of books
   { title: 'Mastering React', author: 'Anthony Pham', cover: "MasteringReact" },
   { title: 'Practical React', author: 'Alex Johnson', cover: "PracticalReact" },
   { title: 'React in Action', author: 'Bob Climo', cover: "The last book cover" },

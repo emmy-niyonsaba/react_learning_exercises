@@ -3,44 +3,27 @@ import './App.css'
 import SimpleForm from './components/SimpleForm';
 import EventHandling from './components/EventHandling';
 import GetData from './components/GetData';
-const books = [
-  //set of books
-  { title: 'Mastering React', author: 'Anthony Pham', cover: "MasteringReact" },
-  { title: 'Practical React', author: 'Alex Johnson', cover: "PracticalReact" },
-  { title: 'React in Action', author: 'Bob Climo', cover: "The last book cover" },
-];
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './components/Home';
 
 function App() {
-
-  const bookCard = () => {
-    return books.map((book, index) => (
-      <div key={index} className="book-card">
-        <h2>The book Collection</h2>
-        <h1>Book {index + 1}</h1>
-        <p>Name: {book.title}</p>
-        <p>Author: {book.author}</p>
-        <p>Cover: {book.cover}</p>
-      </div>
-    ));
-  };
-
   return (
-    <>
-      <section className="book-list">
-        {bookCard()}
-      </section>
-      <section className='form-section'>
-        <SimpleForm />
-      </section>
+    <BrowserRouter>
 
+        <Navbar />
+        {/* <Home /> */}
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/simple-form" element={<SimpleForm />} />
+  <Route path="/event-handling" element={<EventHandling />} />
+  <Route path="/get-data" element={<GetData />} />
+</Routes>
 
-      //Event handling section
-      <section className='event-section'>
-        <EventHandling />
-        <GetData></GetData>
-      </section>
-   
-    </>
+        <Footer />
+    
+    </BrowserRouter>
   );
 }
 
